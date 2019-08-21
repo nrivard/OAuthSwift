@@ -45,7 +45,7 @@ import SafariServices
 import AuthenticationServices
 #endif
 
-    @available(iOS 13.0, macCatalyst 13.0, *)
+    @available(iOS 13.0, macCatalyst 13.0, macOS 10.15, *)
     open class ASWebAuthenticationURLHandler: OAuthSwiftURLHandlerType {
         var webAuthSession: ASWebAuthenticationSession!
         let callbackUrlScheme: String
@@ -111,7 +111,7 @@ import AuthenticationServices
             _ = webAuthSession.start()
         }
     }
-    #endif
+#endif
 
     @available(iOS 9.0, *)
     open class SafariURLHandler: NSObject, OAuthSwiftURLHandlerType, SFSafariViewControllerDelegate {
